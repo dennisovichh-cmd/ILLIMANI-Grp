@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
+  <title>Instituto Técnico Illimani | Laboratorio Dental</title>
+  <meta name="description" content="Técnico Medio en Laboratorio Dental. Resolución Ministerial 152/2025. El Alto, Bolivia.">
+  <meta name="theme-color" content="#0b3d5c">
+  <link rel="manifest" href="manifest.json?v=1">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body class="theme-dark" data-session="none">
+
+<!-- ============ CABECERA ============ -->
+<header class="site-header">
+  <a href="#inicio" class="brand" aria-label="Ir al inicio">
+    <img src="https://institutoillimani.netlify.app/images/logo.png" alt="Logo Instituto Técnico Illimani" width="40" height="40">
+    <span>Instituto Técnico Illimani</span>
+  </a>
+
+  <nav id="mainNav" class="main-nav" aria-label="Menú principal">
+    <a href="#inicio" data-target="inicio">Inicio</a>
+    <a href="#turnos" data-target="turnos">Turnos</a>
+    <a href="#galeria" data-target="galeria">Experiencia</a>
+    <a href="#plan" data-target="plan">Plan de estudios</a>
+    <a href="#ods" data-target="ods">ODS</a>
+    <a href="#requisitos" data-target="requisitos">Requisitos</a>
+    <a href="#ubicacion" data-target="ubicacion">Ubicación</a>
+    <a href="#inscripcion" data-target="inscripcion" data-access="cliente" class="is-locked">Inscripción</a>
+    <a href="#gerente" data-target="gerente" data-access="gerente" class="is-locked">Precios</a>
+  </nav>
+
+  <div class="header-actions">
+    <button type="button" id="themeToggle" class="icon-btn" aria-label="Cambiar a modo claro">
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+    <button type="button" id="authBtn" class="btn btn-ghost">Iniciar sesión</button>
+    <button type="button" id="menuToggle" class="icon-btn menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ============ PÁGINAS (una por pantalla) ============ -->
+<main class="pages" id="pages">
+
+  <!-- 1. INICIO / HERO -->
+  <section id="inicio" class="page is-active" data-page="inicio" aria-label="Inicio">
+    <div class="page-inner hero">
+      <div class="hero-text">
+        <p class="kicker">Resolución Ministerial N.º 152/2025 · Gestión 2026</p>
+        <h1>Construye Sonrisas, <span>Diseña tu Futuro.</span></h1>
+        <p class="lead">Fórmate como <strong>Técnico Medio en Laboratorio Dental</strong> con clases 100% presenciales en laboratorios equipados y título en Provisión Nacional.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/59168180640?text=Hola,%20deseo%20mayor%20informaci%C3%B3n%20sobre%20la%20inscripci%C3%B3n%202026" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+          <a class="btn btn-ghost" href="#turnos" data-target="turnos">Ver turnos</a>
+        </div>
+        <p class="fine">Último inicio publicado: 3 de agosto de 2026. Próxima fecha de inicio: <em>por confirmar</em>.</p>
+      </div>
+
+      <div class="carousel hero-carousel" data-carousel="hero" aria-roledescription="carrusel" aria-label="Destacados">
+        <div class="carousel-track">
+          <figure class="slide is-active" aria-hidden="false">
+            <img src="https://institutoillimani.netlify.app/images/graduacion1.jpg" alt="Entrega de títulos del instituto" loading="lazy">
+            <figcaption><span class="badge">Título oficial</span> Provisión Nacional, R.M. 152/2025</figcaption>
+          </figure>
+          <figure class="slide" aria-hidden="true">
+            <img src="https://institutoillimani.netlify.app/images/ferias.jpg" alt="Ferias académicas del instituto" loading="lazy">
+            <figcaption><span class="badge">Novedad</span> Ferias académicas y presentación de proyectos</figcaption>
+          </figure>
+          <figure class="slide" aria-hidden="true">
+            <img src="https://institutoillimani.netlify.app/images/seminarios.jpg" alt="Seminarios de actualización" loading="lazy">
+            <figcaption><span class="badge">Formación</span> Seminarios de actualización constante</figcaption>
+          </figure>
+        </div>
+        <button type="button" class="carousel-btn carousel-prev" aria-label="Destacado anterior">&#8249;</button>
+        <button type="button" class="carousel-btn carousel-next" aria-label="Destacado siguiente">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. TURNOS / ATMÓSFERA (pestañas con fundido) -->
+  <section id="turnos" class="page" data-page="turnos" aria-label="Turnos disponibles">
+    <div class="page-inner">
+      <h2>Elige el turno que mejor se adapte a ti</h2>
+      <div class="tabs" role="tablist" aria-label="Turnos">
+        <button type="button" class="tab is-active" role="tab" aria-selected="true" aria-controls="tp-manana" id="tt-manana" data-key="manana">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          Mañana
+        </button>
+        <button type="button" class="tab" role="tab" aria-selected="false" aria-controls="tp-tarde" id="tt-tarde" data-key="tarde" tabindex="-1">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17h18M7 17a5 5 0 0 1 10 0M12 5v3M5.6 9.6l1.8 1.8M18.4 9.6l-1.8 1.8"/></svg>
+          Tarde
+        </button>
+        <button type="button" class="tab" role="tab" aria-selected="false" aria-controls="tp-noche" id="tt-noche" data-key="noche" tabindex="-1">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          Noche
+        </button>
+      </div>
+
+      <div class="tab-stage">
+        <article class="tab-panel is-active" role="tabpanel" id="tp-manana" aria-labelledby="tt-manana" data-key="manana">
+          <div class="panel-text">
+            <h3>Turno Mañana</h3>
+            <p class="schedule">08:30 – 12:30</p>
+            <p>Ideal para dedicación matutina y prácticas en laboratorio intensivo.</p>
+          </div>
+          <img src="https://institutoillimani.netlify.app/images/visitas.jpg" alt="Visitas institucionales" loading="lazy">
+        </article>
+        <article class="tab-panel" role="tabpanel" id="tp-tarde" aria-labelledby="tt-tarde" data-key="tarde">
+          <div class="panel-text">
+            <h3>Turno Tarde</h3>
+            <p class="schedule">14:30 – 18:30</p>
+            <p>Excelente balance para coordinar con responsabilidades personales.</p>
+          </div>
+          <img src="https://institutoillimani.netlify.app/images/seminarios.jpg" alt="Seminarios" loading="lazy">
+        </article>
+        <article class="tab-panel" role="tabpanel" id="tp-noche" aria-labelledby="tt-noche" data-key="noche">
+          <div class="panel-text">
+            <h3>Turno Noche</h3>
+            <p class="schedule">18:30 – 21:30</p>
+            <p>Pensado para quienes trabajan de día y buscan superarse laboralmente.</p>
+          </div>
+          <img src="https://institutoillimani.netlify.app/images/ferias.jpg" alt="Ferias académicas" loading="lazy">
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. GALERÍA / AMBIENTE -->
+  <section id="galeria" class="page" data-page="galeria" aria-label="Experiencia Illimani">
+    <div class="page-inner">
+      <h2>Experiencia Illimani</h2>
+      <p class="muted">Prácticas, ferias y actividades extracurriculares.</p>
+      <div class="carousel gallery-carousel" data-carousel="galeria" aria-label="Galería">
+        <div class="carousel-track">
+          <figure class="slide is-active" aria-hidden="false">
+            <img src="https://institutoillimani.netlify.app/images/ferias.jpg" alt="Ferias de salud" loading="lazy">
+            <figcaption><span class="badge">Ferias</span> Presentación de proyectos</figcaption>
+          </figure>
+          <figure class="slide" aria-hidden="true">
+            <img src="https://institutoillimani.netlify.app/images/visitas.jpg" alt="Visitas institucionales" loading="lazy">
+            <figcaption><span class="badge">Prácticas</span> Simulacros y trabajo de campo</figcaption>
+          </figure>
+          <figure class="slide" aria-hidden="true">
+            <img src="https://institutoillimani.netlify.app/images/seminarios.jpg" alt="Seminarios" loading="lazy">
+            <figcaption><span class="badge">Seminarios</span> Actualización constante</figcaption>
+          </figure>
+          <figure class="slide" aria-hidden="true">
+            <img src="https://institutoillimani.netlify.app/images/graduacion2.jpg" alt="Acto de graduación" loading="lazy">
+            <figcaption><span class="badge">Graduación</span> Técnicos listos para el campo laboral</figcaption>
+          </figure>
+          <figure class="slide" aria-hidden="true">
+            <img src="https://institutoillimani.netlify.app/images/campeonatos.jpg" alt="Campeonatos deportivos" loading="lazy">
+            <figcaption><span class="badge">Deporte</span> Convivencia e integración estudiantil</figcaption>
+          </figure>
+        </div>
+        <button type="button" class="carousel-btn carousel-prev" aria-label="Anterior">&#8249;</button>
+        <button type="button" class="carousel-btn carousel-next" aria-label="Siguiente">&#8250;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PLAN DE ESTUDIOS / AGENDA (tarjetas) -->
+  <section id="plan" class="page" data-page="plan" aria-label="Plan de estudios">
+    <div class="page-inner">
+      <h2>Plan de estudios</h2>
+      <p class="muted">Formación técnica profesional de 2 años: 80% práctico y 20% teórico. <em>Distribución por año: por confirmar.</em></p>
+      <div class="card-grid">
+        <article class="card">
+          <img src="https://institutoillimani.netlify.app/images/visitas.jpg" alt="Primer año" loading="lazy">
+          <div class="card-body">
+            <h3>Primer año</h3>
+            <ul class="plain-list">
+              <li>Proceso de Salud en Bolivia</li>
+              <li>Morfofisiología Básica</li>
+              <li>Soporte Básico de Vida</li>
+              <li>Laboratorio y Material Dental</li>
+              <li>Anatomía Dentaria</li>
+              <li>Prótesis Removible I y II</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://institutoillimani.netlify.app/images/seminarios.jpg" alt="Segundo año" loading="lazy">
+          <div class="card-body">
+            <h3>Segundo año</h3>
+            <ul class="plain-list">
+              <li>Prótesis Fija I y II</li>
+              <li>Cromo Cobalto</li>
+              <li>Ortodoncia</li>
+              <li>Cerámica Dental</li>
+              <li>Práctica de Laboratorio</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://institutoillimani.netlify.app/images/graduacion2.jpg" alt="Salida laboral" loading="lazy">
+          <div class="card-body">
+            <h3>Salida laboral</h3>
+            <ul class="plain-list">
+              <li>Laboratorio propio</li>
+              <li>Clínicas odontológicas</li>
+              <li>Especialista estético</li>
+              <li>Asesor odontológico</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4b. CRITERIOS ODS (proyecto grupal) -->
+  <section id="ods" class="page" data-page="ods" aria-label="Objetivos de Desarrollo Sostenible">
+    <div class="page-inner">
+      <h2>Compromiso con los ODS</h2>
+      <p class="muted">Objetivos de Desarrollo Sostenible que orientan la formación del instituto. <em>Textos por confirmar con la dirección.</em></p>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-body">
+            <span class="ods-num">ODS 3</span>
+            <h3>Salud y bienestar</h3>
+            <p>Formamos técnicos que fabrican prótesis y aparatos dentales, contribuyendo a la salud bucal de las personas.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <span class="ods-num">ODS 4</span>
+            <h3>Educación de calidad</h3>
+            <p>Formación técnica presencial en laboratorios equipados, con título en Provisión Nacional y turnos mañana, tarde y noche.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-body">
+            <span class="ods-num">ODS 8</span>
+            <h3>Trabajo decente</h3>
+            <p>Salidas laborales como laboratorio propio, clínicas odontológicas, especialista estético o asesor.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. REQUISITOS / NORMAS -->
+  <section id="requisitos" class="page" data-page="requisitos" aria-label="Requisitos de inscripción">
+    <div class="page-inner split">
+      <div>
+        <h2>Requisitos para tu inscripción</h2>
+        <p class="muted">Presenta toda la documentación en un <strong>fólder amarillo</strong>.</p>
+        <ul class="check-list">
+          <li><span class="check" aria-hidden="true">✓</span> Fotocopia de Carnet de Identidad vigente</li>
+          <li><span class="check" aria-hidden="true">✓</span> Certificado de Nacimiento original</li>
+          <li><span class="check" aria-hidden="true">✓</span> Fotocopia legalizada de Título de Bachiller</li>
+          <li><span class="check" aria-hidden="true">✓</span> 2 fotografías 4x4 (fondo rojo)</li>
+        </ul>
+        <p class="note">Nota: revisa con el instituto si hay documentos adicionales. <em>Por confirmar.</em></p>
+      </div>
+      <div class="faq">
+        <h3>Preguntas frecuentes</h3>
+        <div class="accordion">
+          <button type="button" class="acc-btn" aria-expanded="true" aria-controls="faq1">¿El título tiene validez nacional?</button>
+          <div class="acc-panel" id="faq1">Sí. Al finalizar tus estudios recibes el Título en Provisión Nacional otorgado por el Ministerio de Educación (R.M. 152/2025).</div>
+          <button type="button" class="acc-btn" aria-expanded="false" aria-controls="faq2">¿Cuáles son los requisitos de inscripción?</button>
+          <div class="acc-panel" id="faq2" hidden>Carnet de Identidad, Certificado de Nacimiento original, Título de Bachiller legalizado y 2 fotos 4x4 con fondo rojo, todo en un fólder amarillo.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. UBICACIÓN -->
+  <section id="ubicacion" class="page" data-page="ubicacion" aria-label="Ubicación">
+    <div class="page-inner split">
+      <div class="map-photos">
+        <figure>
+          <img src="https://institutoillimani.netlify.app/images/ferias.jpg" alt="Foto de la entrada (por confirmar)" loading="lazy">
+          <figcaption>Entrada · foto por confirmar</figcaption>
+        </figure>
+        <figure>
+          <img src="https://institutoillimani.netlify.app/images/graduacion1.jpg" alt="Foto del mapa (por confirmar)" loading="lazy">
+          <figcaption>Mapa · foto por confirmar</figcaption>
+        </figure>
+      </div>
+      <div>
+        <h2>Ubicación</h2>
+        <p class="lead-small"><strong>El Alto / La Paz, Bolivia</strong></p>
+        <p>Referencia: <em>por confirmar</em></p>
+        <p>Teléfono: <a href="tel:+59168180640">+591 68180640</a></p>
+        <a class="btn btn-primary" href="https://maps.app.goo.gl/eB7eYsxu8KhG3NGM7" target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. INSCRIPCIÓN EN 3 PASOS (solo cliente) -->
+  <section id="inscripcion" class="page is-locked" data-page="inscripcion" data-access="cliente" aria-label="Inscripción">
+    <div class="page-inner">
+      <h2>Inscripción</h2>
+      <ol class="steps" aria-label="Progreso de inscripción">
+        <li class="step-dot is-current" data-step="1"><span>1</span> Datos</li>
+        <li class="step-dot" data-step="2"><span>2</span> Montos</li>
+        <li class="step-dot" data-step="3"><span>3</span> Pago QR</li>
+      </ol>
+
+      <!-- Paso 1: formulario de datos -->
+      <div class="insc-step is-active" data-step="1">
+        <form id="inscForm" class="insc-form" novalidate>
+          <div class="grid-2">
+            <label class="field">Nombres <input type="text" name="nombres" autocomplete="given-name" required></label>
+            <label class="field">Apellidos <input type="text" name="apellidos" autocomplete="family-name" required></label>
+            <label class="field">Carnet de Identidad <input type="text" name="ci" inputmode="numeric" required></label>
+            <label class="field">Celular <input type="tel" name="celular" inputmode="tel" required></label>
+            <label class="field full">Correo electrónico <input type="email" name="correo" autocomplete="email" required></label>
+            <label class="field full">Turno
+              <select name="turno" required>
+                <option value="">Selecciona un turno</option>
+                <option value="0">Mañana · 08:30 – 12:30</option>
+                <option value="1">Tarde · 14:30 – 18:30</option>
+                <option value="2">Noche · 18:30 – 21:30</option>
+              </select>
+            </label>
+          </div>
+          <fieldset class="field-group">
+            <legend>Qué vas a pagar</legend>
+            <label class="option-card">
+              <input type="checkbox" name="paquete" value="matricula">
+              <span class="opt-title">Matrícula anual</span>
+              <span class="price" data-price="matricula"></span>
+            </label>
+            <label class="option-card">
+              <input type="checkbox" name="paquete" value="mensualidad">
+              <span class="opt-title">Mensualidad</span>
+              <span class="price" data-price="mensualidad"></span>
+            </label>
+          </fieldset>
+          <p id="formMsg" class="form-msg" role="alert"></p>
+          <button type="submit" class="btn btn-primary">Continuar</button>
+        </form>
+      </div>
+
+      <!-- Paso 2: horario y montos -->
+      <div class="insc-step" data-step="2">
+        <div class="split">
+          <div>
+            <h3>Datos de la inscripción</h3>
+            <ul id="recap" class="plain-list"></ul>
+          </div>
+          <aside class="summary-card">
+            <h3>Montos a cancelar</h3>
+            <ul id="amountList" class="plain-list"></ul>
+            <p class="total" id="amountTotal">Bs 0</p>
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" data-go="1">Volver</button>
+              <button type="button" class="btn btn-primary" data-go="3">Pagar con QR</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- Paso 3: cancelación por QR -->
+      <div class="insc-step" data-step="3">
+        <div class="split">
+          <div>
+            <h3>Cancela con QR</h3>
+            <p>Escanea el código con tu aplicación bancaria o billetera móvil y paga el total indicado.</p>
+            <p class="total" id="qrTotal">Bs 0</p>
+            <p class="muted small">QR de pago simulado. Reemplázalo por el QR real del instituto antes de publicar.</p>
+          </div>
+          <div class="summary-card qr-card">
+            <div id="qrBox" class="qr-box"></div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" data-go="2">Volver</button>
+              <button type="button" id="finishPay" class="btn btn-primary">Ya pagué</button>
+            </div>
+            <p id="finishMsg" class="form-msg is-ok" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. PANEL DE GERENTE (solo gerente) -->
+  <section id="gerente" class="page is-locked" data-page="gerente" data-access="gerente" aria-label="Panel de gerente">
+    <div class="page-inner split">
+      <div>
+        <h2>Panel de gerente</h2>
+        <p class="muted">Los cambios se guardan en este navegador y se aplican a la inscripción en vivo.</p>
+        <form id="priceForm" novalidate>
+          <label class="field">Matrícula anual (Bs)
+            <input type="number" name="matricula" min="0" max="100000" step="1" required>
+          </label>
+          <label class="field">Mensualidad (Bs)
+            <input type="number" name="mensualidad" min="0" max="100000" step="1" required>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            <button type="button" id="restorePrices" class="btn btn-ghost">Restaurar valores originales</button>
+          </div>
+          <p id="priceMsg" class="form-msg" role="status"></p>
+        </form>
+      </div>
+      <aside class="summary-card">
+        <h3>Vista previa</h3>
+        <ul class="plain-list">
+          <li>Matrícula anual: <span data-price="matricula"></span></li>
+          <li>Mensualidad: <span data-price="mensualidad"></span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ NAVEGACIÓN LATERAL Y FLECHAS ============ -->
+<nav class="side-dots" aria-label="Indicador de secciones"></nav>
+<div class="arrows">
+  <button type="button" id="pageUp" class="arrow" aria-label="Sección anterior">&#8593;</button>
+  <button type="button" id="pageDown" class="arrow" aria-label="Sección siguiente">&#8595;</button>
+</div>
+
+<!-- ============ PIE ============ -->
+<footer class="site-footer">
+  <p>&copy; <span id="year">2026</span> Instituto Técnico Illimani · R.M. 152/2025</p>
+  <div class="socials">
+    <a href="https://www.facebook.com/share/1G1SY3oS9y/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8V6c0-.8.4-1.2 1.2-1.2H17V2h-2.8C11.6 2 10.6 3.4 10.6 5.6V8H8v3h2.6v11h3.4V11h2.7l.4-3z"/></svg>
+    </a>
+    <a href="https://wa.me/59168180640" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8.9-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.2 0-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.6 11.6 0 0 0 4.4 3.9c2.1.9 2.5.7 3 .7a2.5 2.5 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/instituto.illimani/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (por confirmar)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.3 6a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 17.3 6z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@instituto.illimani" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 3a5.4 5.4 0 0 0 4.4 4.4v3.1a8.4 8.4 0 0 1-4.4-1.2v6.2a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v3.2a2.9 2.9 0 1 0 2 2.7V3h3z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<!-- ============ MODAL DE LOGIN ============ -->
+<div class="modal" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle" aria-hidden="true">
+  <div class="modal-card">
+    <button type="button" class="modal-close" aria-label="Cerrar">&times;</button>
+    <h3 id="authTitle">Iniciar sesión</h3>
+    <p class="muted small">Acceso simulado en el navegador (demo).</p>
+    <form id="loginForm" novalidate>
+      <fieldset class="field-group">
+        <legend>Tipo de cuenta</legend>
+        <label class="option-inline"><input type="radio" name="role" value="cliente" checked> Cliente</label>
+        <label class="option-inline"><input type="radio" name="role" value="gerente"> Gerente</label>
+      </fieldset>
+      <label class="field">Usuario <input type="text" id="loginUser" autocomplete="username" required></label>
+      <label class="field">Contraseña <input type="password" id="loginPass" autocomplete="current-password" required></label>
+      <p id="loginMsg" class="form-msg" role="alert"></p>
+      <button type="submit" class="btn btn-primary">Entrar</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js?v=1"></script>
+</body>
+</html>
